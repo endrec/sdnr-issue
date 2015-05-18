@@ -25,8 +25,9 @@ public class Neo4JInitializer extends Neo4jConfiguration {
 
     @Bean
     public GraphDatabaseService graphDatabaseService() throws IOException {
-        return new SpringCypherRestGraphDatabase("http://localhost:7474/db/data/", "neo4j", "1234");
-        //return new GraphDatabaseFactory().newEmbeddedDatabase(Files.createTempDirectory("graph").toString());
+        return new SpringCypherRestGraphDatabase("http://localhost:7474/db/data/", "neo4j", "1234"); // Change these parameters to your database settings
+        // Embedded database works fine.
+        // return new GraphDatabaseFactory().newEmbeddedDatabase(Files.createTempDirectory("graph").toString());
     }
 
 }
